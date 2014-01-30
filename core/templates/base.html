@@ -1,0 +1,36 @@
+{% spaceless %}
+    {% load i18n %}
+    {% load l10n %}
+    {% load staticfiles %}
+{% endspaceless %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}Gallery{% endblock %}</title>
+        {% block styles %}
+            <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" />
+            <link rel="stylesheet" href="{% static 'core/css/common.css' %}" />
+        {% endblock %}
+        {% block end_head %}{% endblock %}
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'picture-list' %}">List</a></li>
+                    <li><a href="{% url 'picture-create' %}">Upload</a></li>
+                </ul>
+            </div>
+        </div>
+        <h2>{% block page_header %}Gallery{% endblock %}</h2>
+        {% block content %}{% endblock %}
+        {% block end_body %}
+            <script src="{% static 'core/js/jquery-1.11.0.min.js' %}"></script>
+        {% endblock %}
+    </div>
+    </body>
+</html>

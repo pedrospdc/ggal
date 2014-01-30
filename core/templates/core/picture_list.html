@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Picture List{% endblock %}
+{% block page_header %}Picture List{% endblock %}
+
+{% block content %}
+<table class="table">
+{% for picture in object_list %}
+    <tr>
+        <td>{{ picture }}</td>
+        <td><i class="icon-edit"></i> <a href="{% url 'picture-edit' picture.pk %}">Edit</a></td>
+        <td><i class="icon-remove"></i> <a href="{% url 'picture-delete' picture.pk %}">Remove</a></td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

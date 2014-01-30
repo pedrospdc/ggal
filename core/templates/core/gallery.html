@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div id="gallery">
+        <div class="left">
+            <a href="javascript:void(0)"><</a>
+        </div>
+        <div class="container">
+            {% for picture in object_list %}
+                <img src="{{ picture.file }}" />
+            {% endfor %}
+        </div>
+        <div class="right">
+            <a href="javascript:void(0)">></a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block end_body %}
+    {{ block.super }}
+    <script src="{% static 'core/js/gallery.js' %}"></script>
+{% endblock %}

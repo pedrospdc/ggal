@@ -1,0 +1,5 @@
+#gallery { position: relative;}
+    #gallery .left, #gallery .right { position: absolute; top: 50%; }
+    #gallery .left { left: 20px; }
+    #gallery .right { right: 20px; }
+        #gallery .container img { display: none; }

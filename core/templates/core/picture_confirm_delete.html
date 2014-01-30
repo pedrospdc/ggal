@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete {{ object }}?{% endblock %}
+{% block page_header %}Delete {{ object }}?{% endblock %}
+
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit" name="answer" value="delete" class="btn btn-danger">Delete</button>
+    <button type="submit" name="answer" value="cancel" class="btn">Cancel</button>
+</form>
+{% endblock %}
