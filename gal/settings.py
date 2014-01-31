@@ -86,3 +86,4 @@ USE_TZ = False
 STATIC_URL = '/static/'
 MEDIA_URL = '/'
 MEDIA_ROOT = os.path.join(RESOURCES_ROOT, 'uploads')
+ASSETS_ROOT = os.path.join(RESOURCES_ROOT, 'test_assets')

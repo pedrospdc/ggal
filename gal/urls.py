@@ -8,9 +8,6 @@ from core.views import PictureCreate, PictureList, PictureUpdate, PictureDelete
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'gal.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
     url(r'^$', PictureList.as_view(template_name='core/gallery.html'), name='gallery'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^picture/create/$', PictureCreate.as_view(), name='picture-create'),

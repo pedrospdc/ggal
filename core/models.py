@@ -10,4 +10,4 @@ class Picture(models.Model):
         return self.title or self.file
 
     title = models.CharField('Title', max_length=80, blank=True, null=True)
-    file = models.ImageField('Image', upload_to='uploads/')
+    file = models.ImageField('Image', upload_to='.')

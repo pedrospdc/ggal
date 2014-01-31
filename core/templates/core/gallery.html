@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-    <div id="gallery">
+    <div id="gallery" data-index="0">
         <div class="left">
-            <a href="javascript:void(0)"><</a>
+            <a href="javascript:void(0)"><img src="{% static 'core/img/seta_esquerda.jpg' %}" /></a>
         </div>
         <div class="container">
             {% for picture in object_list %}
@@ -11,7 +11,12 @@
             {% endfor %}
         </div>
         <div class="right">
-            <a href="javascript:void(0)">></a>
+            <a href="javascript:void(0)"><img src="{% static 'core/img/seta_direita.jpg' %}" /></a>
+        </div>
+        <div class="pagination">
+            <div class="inner_pagination">
+                <span class="current_image">1</span> of <span class="total_image">{{ object_list|length }}</span>
+            </div>
         </div>
     </div>
 {% endblock %}

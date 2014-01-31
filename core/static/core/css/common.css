@@ -1,5 +1,8 @@
 #gallery { position: relative;}
-    #gallery .left, #gallery .right { position: absolute; top: 50%; }
+    #gallery .container { width: 50%; margin: 0 auto; }
+    #gallery .pagination { position: relative; }
+        #gallery .pagination .inner_pagination { margin: 0 auto; text-align: center; }
+    #gallery .left, #gallery .right { position: absolute; top: 150px; }
     #gallery .left { left: 20px; }
     #gallery .right { right: 20px; }
         #gallery .container img { display: none; }
