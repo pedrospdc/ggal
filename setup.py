@@ -80,5 +80,3 @@ if not os.path.exists(SETUP_LOCK):
     setup_db()
     sync_db()
     lock()
-
-subprocess.call(('python', 'manage.py', 'runserver'))
